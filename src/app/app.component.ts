@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { BarraLateralComponent } from './barra-lateral/barra-lateral.component';
-import { DireccionComponent } from './vistas/vista1/direccion/direccion.component';
-import { TablaComponent } from './vistas/vista1/tabla/tabla.component';
+import { DireccionComponent } from './vistas/direccion/direccion.component';
+import { TablaComponent } from './vistas/tabla/tabla.component';
 
 @Component({
   selector: 'app-root',

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { TablaComponent } from './tabla/tabla.component';
-import { DireccionComponent } from './direccion/direccion.component';
+import { TablaComponent } from '../tabla/tabla.component';
+import { DireccionComponent } from '../direccion/direccion.component';
 
 @Component({
   selector: 'app-vista1',

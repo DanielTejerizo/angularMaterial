@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DireccionComponent } from '../vista1/direccion/direccion.component';
+import { DireccionComponent } from '../direccion/direccion.component';
 
 @Component({
   selector: 'app-vista2',
