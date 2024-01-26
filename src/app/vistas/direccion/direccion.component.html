@@ -1,20 +1,20 @@
 <form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
   <mat-card class="shipping-card">
     <mat-card-header>
-      <mat-card-title>Shipping Information</mat-card-title>
+      <mat-card-title>Información de pedido</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Company" formControlName="company">
+            <input matInput placeholder="Compañia" formControlName="company">
           </mat-form-field>
         </div>
       </div>
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="First name" formControlName="firstName">
+            <input matInput placeholder="Nombre" formControlName="firstName">
             @if (addressForm.controls['firstName'].hasError('required')) {
               <mat-error>First name is <strong>required</strong></mat-error>
             }
@@ -22,7 +22,7 @@
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="Last name" formControlName="lastName">
+            <input matInput placeholder="Apellidos" formControlName="lastName">
             @if (addressForm.controls['lastName'].hasError('required')) {
               <mat-error>Last name is <strong>required</strong></mat-error>
             }
@@ -32,7 +32,7 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <textarea matInput placeholder="Address" formControlName="address"></textarea>
+            <textarea matInput placeholder="Dirección" formControlName="address"></textarea>
             @if (addressForm.controls['address'].hasError('required')) {
               <mat-error>Address is <strong>required</strong></mat-error>
             }
@@ -43,11 +43,11 @@
         <div class="col">
           @if (hasUnitNumber) {
             <mat-form-field class="full-width">
-              <textarea matInput placeholder="Address 2" formControlName="address2"></textarea>
+              <textarea matInput placeholder="Segunda direccion" formControlName="address2"></textarea>
             </mat-form-field>
           } @else {
             <button mat-button type="button" (click)="hasUnitNumber = !hasUnitNumber">
-              + Add C/O, Apt, Suite, Unit
+              + Añadir otra dirección
             </button>
           }
         </div>
@@ -55,7 +55,7 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput placeholder="City" formControlName="city">
+            <input matInput placeholder="Ciudad" formControlName="city">
             @if (addressForm.controls['city'].hasError('required')) {
               <mat-error>City is <strong>required</strong></mat-error>
             }
@@ -63,7 +63,7 @@
         </div>
         <div class="col">
           <mat-form-field class="full-width">
-            <mat-select placeholder="State" formControlName="state">
+            <mat-select placeholder="Estado" formControlName="state">
               @for (state of states; track state) {
                 <mat-option [value]="state.abbreviation">{{ state.name }}</mat-option>
               }
@@ -85,15 +85,15 @@
       <div class="row">
         <div class="col">
           <mat-radio-group formControlName="shipping">
-            <mat-radio-button value="free">Free Shipping</mat-radio-button>
-            <mat-radio-button value="priority">Priority Shipping</mat-radio-button>
-            <mat-radio-button value="nextday">Next Day Shipping</mat-radio-button>
+            <mat-radio-button value="free">Envío gratis</mat-radio-button>
+            <mat-radio-button value="priority">Envio de prioridad</mat-radio-button>
+            <mat-radio-button value="nextday">Envío urgente</mat-radio-button>
           </mat-radio-group>
         </div>
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" type="submit">Submit</button>
+      <button mat-raised-button color="primary" type="submit">Aceptar</button>
     </mat-card-actions>
   </mat-card>
 </form>
