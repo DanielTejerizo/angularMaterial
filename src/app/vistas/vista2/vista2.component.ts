@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { DireccionComponent } from '../vista1/direccion/direccion.component';
 
 @Component({
   selector: 'app-vista2',
   standalone: true,
-  imports: [],
+  imports: [DireccionComponent],
   templateUrl: './vista2.component.html',
   styleUrl: './vista2.component.scss'
 })
