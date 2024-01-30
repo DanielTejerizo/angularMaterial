@@ -3,8 +3,8 @@
 @include mat.core();
 
 $my-basic: mat.define-palette(mat.$purple-palette, 200);
-$my-primary: mat.define-palette(mat.$pink-palette, 600);
-$my-accent: mat.define-palette(mat.$indigo-palette, 400);
+$my-primary: mat.define-palette(mat.$indigo-palette, 600);
+$my-accent: mat.define-palette(mat.$pink-palette, 400);
 $my-warm: mat.define-palette(mat.$blue-palette, 100);
 
 $my-theme: mat.define-light-theme((
